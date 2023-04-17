@@ -1,0 +1,129 @@
+/*  <i className="fa-solid fa-house-chimney" style={{color: "#f5f9ff"}}></i>
+            Icon For "Home"
+            
+    <i className="fa-solid fa-newspaper" style={{color: "#f5f9ff"}}></i>
+            Icon For "Details"
+    
+    <i className="fa-regular fa-address-book" style={{color: "#f5f9ff",}}></i>
+            Icon For "Contatct Us"
+            
+    <i className="fa-solid fa-circle-info" style={{color: "#f5f9ff"}}></i>
+           Icon For "About"   
+           
+           for menu Open Close
+ import { useState } from "react"; 
+
+           const [check,setCheck] = useState(false);
+    
+      const  handleClick = ()=>{
+         setCheck(!check)
+     };
+ <div className={style.menuIcons} onClick={handleClick}> 
+             <i className={check ? "fas fa-times" : "fas fa-bars"} style={{color: "#fff"}}></i>
+             </div>       
+             Previous Code for hamburger
+              <div
+          onClick={() => setNavActive(!navActive)}
+          className={`nav__menu-bar`}
+        >
+          <div>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>*/
+.NavbarItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: black;
+    box-shadow: 0px 5px 15px rgba(0,0,0, 0.90) ;
+    width: 100%; 
+}
+.navMenu{
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+}
+.navlinks{
+    text-decoration: none;
+    color: #f9f4f4;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+
+    
+}
+.navlinks i{
+    padding-right: 10px;
+}
+.navlinks:hover {
+  background: rgb(98, 140, 237) ;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+.fa-bars{
+    color: #8e2121;
+}
+.menuIcons{
+display: none;
+}
+.navlinkmobile{
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    background-color: aqua;
+    border-radius: 3px;
+    color: rgb(169, 82, 82);
+    font-size: 1rem;
+    font-weight: 500;
+    
+}
+
+@media screen and (max-width: 850px){
+    .NavbarItem{
+     z-index: 99;
+    }
+    .navMenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: rgba(169, 157, 157, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(105, 108, 152, 0.37);
+        margin-top: 0px;
+        left:-110%;
+        margin-left: ;
+        transition: all 0.3s ease-in-out;
+        z-index: ;
+
+    }
+    .navMenu active{
+        left: 0%;
+    }
+
+    .navlinks{
+        display:;
+        padding: ;
+        color: ;
+    }
+    .navlinks:hover {
+        background-color:rgba(204, 83, 83, 0.847) ;
+    }
+    .menuIcons{
+    display: block;
+
+    }
+    .navlinkmobile{
+    padding: 1.5rem;
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 80%;
+    margin: auto;
+    }
+
+}
