@@ -2,12 +2,18 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 import { signIn } from "next-auth/react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
+
+  const changedir = () => {
+    router.push("/Navbar");
+  }
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -18,8 +24,7 @@ const Login = () => {
         email,
         password,
       });
-
-      console.log(data);
+      router.push("/Navbar");
     } catch (error) {
       console.log(error);
     }
@@ -78,14 +83,6 @@ const Login = () => {
                 onClick={() => signIn("google")}
               >
                 <i className="fab fa-google"></i>
-              </button>
-
-              <button
-                type="button"
-                className="btn btn-link btn-floating-mx-1"
-                onClick={() => signIn("github")}
-              >
-                <i className="fab fa-github"></i>
               </button>
             </div>
           </form>

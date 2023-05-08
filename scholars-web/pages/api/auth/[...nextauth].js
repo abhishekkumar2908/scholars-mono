@@ -43,7 +43,7 @@ export default NextAuth({
     }),
   ],
   pages: {
-    signIn: "/login",
+    signIn: "/Registration",
   },
   secret: process.env.NEXTAUTH_SECRET,
 });

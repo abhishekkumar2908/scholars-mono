@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import React, { useState } from "react";
-import CityStateDropdowns from '../cityStateDropdowns';
+import CityStateDropdowns from '../component/register/cityStateDropdowns';
 
 const Register = () => {
   const [name, setName] = useState("");
